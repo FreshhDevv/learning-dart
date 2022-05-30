@@ -4,15 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
-Future<int> heavyFutureThatMultipliesByTwo(int a) {
-  return Future.delayed(const Duration(seconds: 3), () {
-    return a * 2;
-  });
+Stream<String> getName() {
+  return Stream.value('Foo');
 }
 
 void test() async {
-  final result = await heavyFutureThatMultipliesByTwo(10);
-  print(result);
+  await for (final value in getName()) {
+    print(value);
+  }
+  print('Stream finished working');
 }
 
 class MyApp extends StatelessWidget {
