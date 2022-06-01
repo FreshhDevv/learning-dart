@@ -5,10 +5,11 @@ void main() {
 }
 
 void test() {
-  final age = 20;
-  final halfOfAge = age / 2;
-  final doubleOfAge = age * 2;
-  print(halfOfAge);
+  final names = ['Foo', 'Bar', 'Baz'];
+  final foo = names[2];
+  print(foo);
+  final length = names.length;
+  print(names.length);
 }
 
 class MyApp extends StatelessWidget {
