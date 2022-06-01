@@ -5,11 +5,10 @@ void main() {
 }
 
 void test() {
-  var names = {'foo', 'bar', 'baz'};
-  names.add('foo');
-  names.add('bar');
-  names.add('baz');
-  print(names);
+  const person = {'age': 20, 'name': 'Foo'};
+  print(person);
+  person['lastname'] = 'Baz';
+  print(person);
 }
 
 class MyApp extends StatelessWidget {
