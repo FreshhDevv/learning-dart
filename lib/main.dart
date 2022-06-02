@@ -5,10 +5,17 @@ void main() {
 }
 
 void test() {
-  String? name = null;
-  print(name);
-  name = 'Foo';
-  print(name);
+  const String? firstName = null;
+  const String? middleName = 'Bar';
+  const String? lastName = 'Baz';
+
+  if (firstName != null) {
+    print("first name is the first non-null value");
+  } else if (middleName != null) {
+    print("middle name is the first non-null value");
+  } else if (lastName != null) {
+    print("last name is the first non-null value");
+  }
 }
 
 class MyApp extends StatelessWidget {
