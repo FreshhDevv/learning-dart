@@ -4,6 +4,12 @@ void main() {
   runApp(const MyApp());
 }
 
+Future<int> heavyFutureThatMultipliesByTwo(int a) {
+  return Future.delayed(const Duration(seconds: 3), () {
+    a * 2;
+  });
+}
+
 class Cat {
   final String name;
   Cat(this.name);
