@@ -4,20 +4,20 @@ void main() {
   runApp(const MyApp());
 }
 
-enum AnimalType { cat, dog, bunny }
-
-void test(AnimalType animalType) {
-  switch (animalType) {
-    case AnimalType.cat:
-      print('Cat');
-      break;
-    case AnimalType.bunny:
-      print('Bunny');
-      break;
-    case AnimalType.dog:
-      print('Dog');
+class Person {
+  void run() {
+    print('Running');
   }
-  print('FUNCTION IS FINISHED');
+
+  void breathe() {
+    print('Breathing');
+  }
+}
+
+void test() {
+  final person = Person();
+  person.run();
+  person.breathe();
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test(AnimalType.cat);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
