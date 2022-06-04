@@ -24,7 +24,7 @@ class Pair<A, B> {
 
   Pair(this.value1, this.value2);
 }
-
+ 
 void test() {
   final names = Pair('foo', 'bar');
 }
