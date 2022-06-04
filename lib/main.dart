@@ -8,11 +8,16 @@ class Person {
   final String name;
 
   Person(this.name);
+
+  void printName() {
+    print('I will now print the name of this person');
+    print(name);
+  }
 }
 
 void test() {
   final foo = Person('Foo Bar');
-  print(foo.name);
+  foo.printName();
 }
 
 class MyApp extends StatelessWidget {
