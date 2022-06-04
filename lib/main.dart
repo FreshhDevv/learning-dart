@@ -4,16 +4,29 @@ void main() {
   runApp(const MyApp());
 }
 
-Iterable<int> getOneTwoThree() sync* {
-  yield 1;
-  yield 2;
-  yield 3;
+class PairOfStrings {
+  final String value1;
+  final String value2;
+
+  PairOfStrings(this.value1, this.value2);
 }
 
-void test() async {
-  for (final value in getOneTwoThree()) {
-    print(value);
-  }
+class PairOfIntegers {
+  final int value1;
+  final int value2;
+
+  PairOfIntegers(this.value1, this.value2);
+}
+
+class Pair<A, B> {
+  final A value1;
+  final B value2;
+
+  Pair(this.value1, this.value2);
+}
+
+void test() {
+  final names = Pair('foo', 'bar');
 }
 
 class MyApp extends StatelessWidget {
