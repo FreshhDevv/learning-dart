@@ -6,35 +6,13 @@ void main() {
 
 Future<int> heavyFutureThatMultipliesByTwo(int a) {
   return Future.delayed(const Duration(seconds: 3), () {
-    a * 2;
+    return a * 2;
   });
 }
 
-class Cat {
-  final String name;
-  Cat(this.name);
-}
-
-class Person {
-  final String firstName;
-  final String lastName;
-
-  Person(this.firstName, this.lastName);
-}
-
-extension FullName on Person {
-  String get fullName => '$firstName $lastName';
-}
-
-extension Run on Cat {
-  void run() {
-    print('Cat $name is running');
-  }
-}
-
-void test() {
-  final foo = Person('Foo', 'Bar');
-  print(foo.fullName);
+void test() async {
+  final result = await heavyFutureThatMultipliesByTwo(10);
+  print(result);
 }
 
 class MyApp extends StatelessWidget {
