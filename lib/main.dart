@@ -4,22 +4,17 @@ void main() {
   runApp(const MyApp());
 }
 
-abstract class LivingThing {
-  void breathe() {
-    print('Living thing is breathing');
-  }
-
-  void move() {
-    print('I am moving');
+class Cat {
+  final String name;
+  Cat(this.name);
+  factory Cat.fluffBall() {
+    return Cat('Fluff Ball 2');
   }
 }
 
-class Cat extends LivingThing {}
-
 void test() {
-  final fluffers = Cat();
-  fluffers.breathe();
-  fluffers.move();
+  final fluffBall = Cat.fluffBall();
+  print(fluffBall.name);
 }
 
 class MyApp extends StatelessWidget {
