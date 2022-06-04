@@ -7,14 +7,21 @@ void main() {
 class Cat {
   final String name;
   Cat(this.name);
-  factory Cat.fluffBall() {
-    return Cat('Fluff Ball 2');
-  }
+  @override
+  bool operator ==(covariant Cat other) => other.name == name;
+
+  @override
+  int get hashCode => name.hashCode; 
 }
 
 void test() {
-  final fluffBall = Cat.fluffBall();
-  print(fluffBall.name);
+  final cat1 = Cat('Foo');
+  final cat2 = Cat('Foo');
+  if (cat1 == cat2) {
+    print('They are equal');
+  } else {
+    print('They are not equal');
+  }
 }
 
 class MyApp extends StatelessWidget {
