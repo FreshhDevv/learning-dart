@@ -4,8 +4,10 @@ void main() {
   runApp(const MyApp());
 }
 
-void test(List<String>? names) {
-  names?.add('Baz');
+enum PersonProperties { firstName, lastName, age }
+
+void test() {
+  print(PersonProperties.firstName);
 }
 
 class MyApp extends StatelessWidget {
