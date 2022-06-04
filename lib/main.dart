@@ -4,10 +4,20 @@ void main() {
   runApp(const MyApp());
 }
 
-enum PersonProperties { firstName, lastName, age }
+enum AnimalType { cat, dog, bunny }
 
-void test() {
-  print(PersonProperties.firstName);
+void test(AnimalType animalType) {
+  switch (animalType) {
+    case AnimalType.cat:
+      print('Cat');
+      break;
+    case AnimalType.bunny:
+      print('Bunny');
+      break;
+    case AnimalType.dog:
+      print('Dog');
+  }
+  print('FUNCTION IS FINISHED');
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +26,7 @@ class MyApp extends StatelessWidget {
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
+    test(AnimalType.cat);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
