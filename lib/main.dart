@@ -26,7 +26,7 @@ class Pair<A, B> {
 }
  
 void test() {
-  final names = Pair('foo', 'bar');
+  final name = Pair('foo', 'bar');
 }
 
 class MyApp extends StatelessWidget {
